@@ -1,5 +1,6 @@
 {
 	"extends": "@bracketed/typescript-config/extra-strict",
+	"compileOnSave": true,
 	"compilerOptions": {
 		"module": "NodeNext",
 		"moduleResolution": "NodeNext",
@@ -16,7 +17,10 @@
 		"declarationMap": false,
 		"incremental": false,
 		"listFiles": true,
-		"listEmittedFiles": true
+		"listEmittedFiles": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"resolveJsonModule": true
 	},
 	"exclude": ["dist", "node_modules"]
 }

@@ -1,3 +1,5 @@
+import { Handlers } from '@bracketed/jova.js';
+import { ApplyHandlerOptions } from '@bracketed/jova.js/decorators';
 import {
 	ApplicationRegistry,
 	ApplicationRequest,
@@ -7,12 +9,15 @@ import {
 	RouteController,
 } from '@bracketed/jova.js/types';
 
+@ApplyHandlerOptions<Handlers.Options>({
+	enabled: true,
+})
 export class Route extends RouteController {
 	public override registerApplicationRoutes(registry: ApplicationRegistry): ApplicationRoute {
 		return registry.registerApplicationRoutes((route) =>
 			route //
 				.setRouteName('')
-				.setMethod(Methods.GET)
+				.setMethod(Methods.POST)
 		);
 	}
 
@@ -21,7 +26,6 @@ export class Route extends RouteController {
 		response: ApplicationResponse
 	): Promise<ApplicationResponse | void> {
 		this.logger.info('Recieved request for', request.baseUrl);
-		return response.status(200).json({ message: 'Hello World!' });
+		return response.status(200).json({ message: 'Hello World!', images: request.files || [] });
 	}
 }
-

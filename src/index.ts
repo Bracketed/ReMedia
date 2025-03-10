@@ -16,8 +16,10 @@
 */
 
 import { JovaServer } from '@bracketed/jova.js';
+import multer from 'multer';
 
-const application = new JovaServer();
+const application = new JovaServer({
+	middlewares: [() => multer({ dest: 'uploads/' }).array('images', 4)],
+});
 
 application.listen(3000);
-
