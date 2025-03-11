@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Media Upload Form</title>
+	</head>
+	<body>
+		<h1>Upload Media</h1>
+		<form
+			id="uploadForm"
+			enctype="multipart/form-data">
+			<input
+				type="file"
+				name="media"
+				accept="image/*,video/*"
+				multiple
+				required />
+			<button type="submit">Upload Media</button>
+		</form>
+
+		<script>
+			document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+				e.preventDefault();
+
+				const formData = new FormData(e.target);
+
+				try {
+					const response = await fetch('http://localhost:3000', {
+						method: 'POST',
+						body: formData,
+					});
+
+					if (!response.ok) throw new Error('Failed to upload media');
+
+					alert('Media uploaded successfully!');
+				} catch (error) {
+					console.error('Error uploading media:', error);
+					alert('Error uploading media. Please try again.');
+				}
+			});
+		</script>
+	</body>
+</html>

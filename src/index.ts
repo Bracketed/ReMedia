@@ -16,10 +16,28 @@
 */
 
 import { JovaServer } from '@bracketed/jova.js';
+import dotenv from 'dotenv';
 import multer from 'multer';
+import path from 'node:path';
+import extensions from './extensions.json' with { type: 'json' };
+
+dotenv.config();
 
 const application = new JovaServer({
-	middlewares: [() => multer({ dest: 'uploads/' }).array('images', 4)],
+	middlewares: [
+		multer({
+			limits: {
+				fileSize: 512 * 1024 * 1024, // 512MB
+			},
+			dest: 'uploads/',
+			fileFilter: function (_req, file, callback) {
+				if (extensions.find((e) => e === path.extname(file.originalname)))
+					return callback(new Error('Only images are allowed'));
+
+				callback(null, true);
+			},
+		}).array('media', 4) as any,
+	],
 });
 
 application.listen(3000);

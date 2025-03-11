@@ -25,6 +25,7 @@ export class Route extends RouteController {
 		request: ApplicationRequest,
 		response: ApplicationResponse
 	): Promise<ApplicationResponse | void> {
+		this.logger.info(request);
 		this.logger.info('Recieved request for', request.baseUrl);
 		return response.status(200).json({ message: 'Hello World!', images: request.files || [] });
 	}
