@@ -16,8 +16,9 @@ export class Route extends RouteController {
 	public override registerApplicationRoutes(registry: ApplicationRegistry): ApplicationRoute {
 		return registry.registerApplicationRoutes((route) =>
 			route //
-				.setRouteName('')
+				.setRouteName('/publish:platform')
 				.setMethod(Methods.POST)
+				.setRouteMiddlewares(['file-type-verify-platform'])
 		);
 	}
 

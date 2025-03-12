@@ -8,12 +8,21 @@
 		<form
 			id="uploadForm"
 			enctype="multipart/form-data">
+			<textarea
+				name="content"
+				required
+				maxlength="260"
+				placeholder="Post Text Content"
+				type="text"></textarea>
+			<br /><br />
 			<input
 				type="file"
 				name="media"
 				accept="image/*,video/*"
 				multiple
 				required />
+			<br />
+			<br />
 			<button type="submit">Upload Media</button>
 		</form>
 
