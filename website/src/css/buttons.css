@@ -1,0 +1,35 @@
+button {
+	cursor: pointer;
+	font-family: 'SegoeUI';
+	line-height: 1.5;
+	text-align: center;
+	-webkit-user-select: none;
+	user-select: none;
+	white-space: nowrap;
+	color: #e6e6e6;
+	font-size: 1rem;
+	font-weight: 510;
+	border-radius: 5px;
+	backdrop-filter: blur(3.5px);
+	background-color: #002823;
+	border: none;
+	padding: 13px;
+	padding-left: 25px;
+	padding-right: 25px;
+	outline: none;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: #013a33;
+}
+
+.inverted-button {
+	color: #171717;
+	background-color: #e6e6e6;
+	transition: background-color 0.3s ease;
+}
+
+.inverted-button:hover {
+	background-color: #c7c7c7;
+}

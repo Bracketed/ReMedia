@@ -1,0 +1,14 @@
+a {
+	color: #75b6e7;
+	text-decoration: none;
+	text-decoration-color: inherit;
+}
+
+a:hover {
+	text-decoration: underline !important;
+	color: #278cda;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+	color: currentColor;
+}

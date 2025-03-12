@@ -1,0 +1,81 @@
+input[type='text'] {
+	padding: 12px;
+	min-width: 40%;
+	font-size: calc(1.1rem * 1);
+	font-family: 'Segoe UI';
+	font-weight: 600;
+	line-height: 1.5;
+	border-radius: 0.3rem;
+	border-color: #414146;
+	color: #e6e6e6;
+	background-color: #232428;
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent), var(--tw-ring-shadow, 0 0 transparent),
+		var(--tw-shadow);
+}
+
+input[type='tel'] {
+	-moz-appearance: textfield;
+	-webkit-appearance: none;
+	appearance: none;
+	margin: 0;
+
+	padding: 12px;
+	min-width: 40%;
+	font-size: calc(1.1rem * 1);
+	font-family: 'Segoe UI';
+	font-weight: 600;
+	line-height: 1.5;
+	border-radius: 0.3rem;
+	border-color: #414146;
+	color: #e6e6e6;
+	background-color: #232428;
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent), var(--tw-ring-shadow, 0 0 transparent),
+		var(--tw-shadow);
+}
+
+textarea {
+	padding: 12px;
+	min-width: 40%;
+	height: 100px;
+	font-size: calc(1.1rem * 1);
+	font-family: 'Segoe UI';
+	font-weight: 600;
+	line-height: 1.5;
+	border-radius: 0.3rem;
+	border-color: #414146;
+	color: #e6e6e6;
+	background-color: #232428;
+	resize: none;
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent), var(--tw-ring-shadow, 0 0 transparent),
+		var(--tw-shadow);
+}
+
+input[type='password'] {
+	padding: 12px;
+	min-width: 40%;
+	font-size: calc(1.1rem * 1);
+	font-family: 'Segoe UI';
+	font-weight: 600;
+	line-height: 1.5;
+	border-radius: 0.3rem;
+	border-color: #414146;
+	color: #e6e6e6;
+	background-color: #232428;
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent), var(--tw-ring-shadow, 0 0 transparent),
+		var(--tw-shadow);
+}
+
+input[type='email'] {
+	padding: 12px;
+	min-width: 40%;
+	font-size: calc(1.1rem * 1);
+	font-family: 'Segoe UI';
+	font-weight: 600;
+	line-height: 1.5;
+	border-radius: 0.3rem;
+	border-color: #414146;
+	color: #e6e6e6;
+	background-color: #232428;
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent), var(--tw-ring-shadow, 0 0 transparent),
+		var(--tw-shadow);
+}
