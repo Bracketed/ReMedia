@@ -33,7 +33,7 @@
 				const formData = new FormData(e.target);
 
 				try {
-					const response = await fetch('http://localhost:3000', {
+					const response = await fetch('http://localhost:3000/publish', {
 						method: 'POST',
 						body: formData,
 					});
@@ -43,7 +43,7 @@
 					alert('Media uploaded successfully!');
 				} catch (error) {
 					console.error('Error uploading media:', error);
-					alert('Error uploading media. Please try again.');
+					alert(`Error uploading media. Please try again. Err:\n\n${error}`);
 				}
 			});
 		</script>

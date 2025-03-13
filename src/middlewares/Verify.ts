@@ -18,8 +18,8 @@ import extensions from '../extensions.json' with { type: 'json' };
 export class Middleware extends MiddlewareController {
 	public override setApplicationMiddlewareOptions(): MiddlewareOptions {
 		return {
-			middlewareName: 'file-type-verify-platform',
-			runsOnAllRoutes: false,
+			middlewareName: 'file-type-verify',
+			runsOnAllRoutes: true,
 		};
 	}
 
@@ -39,7 +39,6 @@ export class Middleware extends MiddlewareController {
 		response: ApplicationResponse,
 		next: ApplicationNextFunction
 	): Promise<ApplicationResponse | void> {
-		this.logger.info(request.params);
 		if (!request.file) return next(); // No file
 		if (!request.files) return next(); // No files
 		if (!Array.isArray(request.files))
@@ -47,7 +46,7 @@ export class Middleware extends MiddlewareController {
 		if (request.files.length === 0) return next();
 
 		if (request.files.length > 4) return response.status(500).json({ err: 'Maximum image media reached.' });
-		// Add rule for if theres more than 1 video only post to instagram, twitter, facebook and bluesky
+		// Add rule for if there's more than 1 video only post to instagram, twitter, facebook and bluesky
 
 		const Files: Express.Multer.File[] = request.files as Express.Multer.File[];
 		let ErrorAtIndex: number | undefined;

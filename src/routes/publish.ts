@@ -18,7 +18,6 @@ export class Route extends RouteController {
 			route //
 				.setRouteName('/publish')
 				.setMethod(Methods.POST)
-				.setRouteMiddlewares(['file-type-verify'])
 		);
 	}
 
