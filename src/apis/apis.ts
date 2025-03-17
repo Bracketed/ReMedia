@@ -1,6 +1,6 @@
 import { TwitterApi } from 'twitter-api-v2';
 
-class APIs {
+export class APIs {
 	private readonly environment: NodeJS.ProcessEnv = process.env;
 
 	public readonly twitter: TwitterApi = new TwitterApi({

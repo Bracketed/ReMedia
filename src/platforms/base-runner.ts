@@ -1,9 +1,7 @@
-import { TwitterApi } from 'twitter-api-v2';
+import { APIs } from '../apis/apis.js';
 
 export class BaseRunner {
-	public apis = {
-		twitter = new TwitterApi(),
-	};
+	public apis: APIs = new APIs();
 
 	constructor() {
 		this.run = this.run.bind(this);

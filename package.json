@@ -24,6 +24,7 @@
 	},
 	"devDependencies": {
 		"@bracketed/typescript-config": "^4.4.0",
+		"@types/fb": "0.0.23",
 		"@types/multer": "^1.4.12",
 		"@types/node": "^22.13.10",
 		"prettier": "^3.5.3",
@@ -35,6 +36,7 @@
 		"@bracketed/jova.js": "^1.7.2",
 		"axios": "^1.8.3",
 		"dotenv": "^16.4.7",
+		"fb": "^2.0.0",
 		"file-type": "^20.4.0",
 		"multer": "^1.4.5-lts.1",
 		"sharp": "^0.33.5",

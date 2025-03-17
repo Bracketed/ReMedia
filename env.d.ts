@@ -5,5 +5,8 @@ declare namespace NodeJS {
 		TWITTER_API_BEARER: string;
 		TWITTER_ACCESS_TOKEN: string;
 		TWITTER_ACCESS_SECRET: string;
+
+		FACEBOOK_ACCESS_TOKEN: string;
+		FACEBOOK_APP_ID: string;
 	}
 }
